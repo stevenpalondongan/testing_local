@@ -1,0 +1,8 @@
+#!/bin/sh
+ssh stevenp@192.168.35.129 <<EOF
+ cd /testing_local
+ git pull
+ npm install --production
+ pm2 restart all
+ exit
+EOF
